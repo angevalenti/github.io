@@ -513,6 +513,7 @@
             <li><a href="#" onclick="showPage('home', 'art')">Art</a></li>
             <li><a href="#" onclick="showPage('home', 'design')">Interior Design</a></li>
             <li><a href="#" onclick="showPage('home', 'reflections')">Reflections</a></li>
+            <li><a href="#" onclick="showPage('archive')">Archive</a></li>
             <li><a href="#" onclick="showPage('about')">About Me</a></li>
             <li><a href="#" onclick="showPage('contact')">Contact</a></li>
         </ul>
@@ -567,10 +568,39 @@
             <div class="about-section">
                 <div class="about-image-placeholder">✨</div>
                 <h2>About Me</h2>
-                <p>Welcome to my creative archive. This space exists as a personal journey back to myself—a place to document and celebrate the intersection of art and design in my life.</p>
-                <p>After a long hiatus from creating, I'm rediscovering what it means to make things with my hands, to trust my instincts, and to let my art and my living spaces speak to each other. This blog is both a record and a reconnection.</p>
-                <p>Here you'll find explorations in painting, interior design projects, process notes, and quiet reflections on what it means to return to your authentic creative self after time away.</p>
-                <p>Thank you for being here.</p>
+                <p>Hi, I'm Ange... Welcome to my work-in-progress.</p>
+                <p>This is an archive of things made and things found. I lost touch with my creative joy for a while... this is the story of finding it again in the grit of a pencil sketch and the story of a vintage find.</p>
+                <p>Between the walls of my home and the pages of my sketchbook, I'm learning to trade perfection for presence again.</p>
+            </div>
+        </div>
+
+        <div class="page-content" id="archivePage">
+            <div class="about-section">
+                <h2>Archive: House Projects</h2>
+                <p>A collection of past interior design projects and home transformations. These spaces represent earlier chapters of my creative journey—experiments with color, texture, and the way we shape the places we live.</p>
+                
+                <div class="image-gallery" style="margin-top: 2rem;">
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">🏠</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">🪴</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">🛋️</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">🎨</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">💡</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="add-image-btn" onclick="document.getElementById('archiveUpload').click()">+</div>
+                    </div>
+                </div>
+                <input type="file" id="archiveUpload" accept="image/*" multiple style="display: none;">
+                <p style="margin-top: 2rem; font-size: 0.9rem; color: #888; font-style: italic;">Click the + to add photos from your past projects</p>
             </div>
         </div>
 
@@ -701,6 +731,8 @@
                 }
             } else if (page === 'about') {
                 document.getElementById('aboutPage').classList.add('active');
+            } else if (page === 'archive') {
+                document.getElementById('archivePage').classList.add('active');
             } else if (page === 'contact') {
                 document.getElementById('contactPage').classList.add('active');
             }
@@ -855,6 +887,25 @@
 
         document.getElementById('postDetailModal').addEventListener('click', function(e) {
             if (e.target === this) closePostDetail();
+        });
+
+        // Archive image upload
+        document.getElementById('archiveUpload').addEventListener('change', function(e) {
+            const files = e.target.files;
+            const gallery = document.querySelector('#archivePage .image-gallery');
+            const addBtn = gallery.querySelector('.add-image-btn').parentElement;
+            
+            for (let i = 0; i < files.length; i++) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const item = document.createElement('div');
+                    item.className = 'gallery-item';
+                    item.innerHTML = `<img src="${event.target.result}" alt="Archive photo">`;
+                    item.onclick = function() { openLightbox(event.target.result); };
+                    gallery.insertBefore(item, addBtn);
+                };
+                reader.readAsDataURL(files[i]);
+            }
         });
 
         const style = document.createElement('style');
