@@ -526,8 +526,25 @@
     <div class="container">
         <div class="page-content active" id="homePage">
             <div class="post-grid" id="postGrid">
-                <!-- Sample posts -->
+                <!-- Your first blog post -->
                 <article class="post-card" onclick="openPostDetail(0)">
+                    <div class="post-image">
+                        <img src="desk.jpeg" alt="Entry 01: The First Mark">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">Reflections</span>
+                            <span class="post-date">January 25, 2026</span>
+                        </div>
+                        <h2 class="post-title">Entry 01: The First Mark</h2>
+                        <p class="post-excerpt">There is a specific kind of grief in losing touch with your own creativity, but I've realized that curating a space is just another way of drawing. I'm no longer waiting until I'm 'ready'—I'm just coming home to the page.</p>
+                        <a href="#" class="read-more" onclick="event.stopPropagation()">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Sample posts -->
+                <!-- Sample posts -->
+                <article class="post-card" onclick="openPostDetail(1)">
                     <div class="post-image">🎨</div>
                     <div class="post-content">
                         <div class="post-meta">
@@ -540,7 +557,7 @@
                     </div>
                 </article>
 
-                <article class="post-card" onclick="openPostDetail(1)">
+                <article class="post-card" onclick="openPostDetail(2)">
                     <div class="post-image">🏠</div>
                     <div class="post-content">
                         <div class="post-meta">
@@ -553,7 +570,7 @@
                     </div>
                 </article>
 
-                <article class="post-card" onclick="openPostDetail(2)">
+                <article class="post-card" onclick="openPostDetail(3)">
                     <div class="post-image">✨</div>
                     <div class="post-content">
                         <div class="post-meta">
@@ -711,9 +728,23 @@
 
     <script>
         const posts = [
-            { id: 0, title: 'Rediscovering Watercolors', category: 'Art', date: 'January 20, 2026', excerpt: 'After years away from the brush...', images: [] },
-            { id: 1, title: 'Living Room Refresh', category: 'Interior Design', date: 'January 18, 2026', excerpt: 'Transforming my living space...', images: [] },
-            { id: 2, title: 'On Beginning Again', category: 'Reflections', date: 'January 15, 2026', excerpt: 'Starting this creative archive...', images: [] }
+            { 
+                id: 0, 
+                title: 'Entry 01: The First Mark', 
+                category: 'Reflections', 
+                date: 'January 25, 2026', 
+                excerpt: 'There is a specific kind of grief in losing touch with your own creativity, but I've realized that curating a space is just another way of drawing. I'm no longer waiting until I'm 'ready'—I'm just coming home to the page.', 
+                content: `<p>I've been standing on the edge of the page for years, afraid to step back in.</p>
+                <p>There is a specific kind of grief in losing touch with your own creativity—a quiet, dull ache that follows you around. I missed the ink on my skin and the way a sketch can capture the soul of a room better than any camera ever could. I was afraid that if I started again, I wouldn't recognize my own hand, or worse, that the joy wouldn't be there waiting for me.</p>
+                <p>But as I've spent these months finishing projects around my home, I've realized that my house and my sketchbook are breathing the same air.</p>
+                <p>Curating this space—the vintage brass, the way the light hits the corner I finally finished, the textures I've foraged—is just another way of drawing. Every piece of furniture I place is a line I'm committing to. Every room I finish is a sketch I'm finally filling in.</p>
+                <p>So, I'm putting the pen back to paper. No more waiting until I'm "ready" or until the fear goes away. I'm just going to document the home I'm building and the person I'm becoming inside it.</p>
+                <p>It's messy. It's long overdue. It's home.</p>`,
+                images: ['largeswan.jpeg', 'smallswan.jpeg', 'desk.jpeg'] 
+            },
+            { id: 1, title: 'Rediscovering Watercolors', category: 'Art', date: 'January 20, 2026', excerpt: 'After years away from the brush...', images: [] },
+            { id: 2, title: 'Living Room Refresh', category: 'Interior Design', date: 'January 18, 2026', excerpt: 'Transforming my living space...', images: [] },
+            { id: 3, title: 'On Beginning Again', category: 'Reflections', date: 'January 15, 2026', excerpt: 'Starting this creative archive...', images: [] }
         ];
 
         const icons = {
@@ -845,7 +876,7 @@
                 <span class="post-category">${post.category}</span>
                 <span class="post-date" style="margin-left: 1rem;">${post.date}</span>
             `;
-            document.getElementById('detailContent').innerHTML = `<p>${post.excerpt}</p>`;
+            document.getElementById('detailContent').innerHTML = post.content || `<p>${post.excerpt}</p>`;
             
             const gallery = document.getElementById('detailGallery');
             gallery.innerHTML = '';
