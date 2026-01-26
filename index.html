@@ -75,10 +75,63 @@
 
         .page-content {
             display: none;
+            animation: fadeIn 0.5s ease;
         }
 
         .page-content.active {
             display: block;
+        }
+
+        .post-page {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .post-page h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+            font-weight: 300;
+            line-height: 1.3;
+        }
+
+        .post-page .post-meta {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .post-page .post-body {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #444;
+            margin-bottom: 2rem;
+        }
+
+        .post-page .post-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            color: #a8967a;
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: #8b7a65;
+        }
+
+        .back-button::before {
+            content: "← ";
         }
 
         .container {
@@ -544,7 +597,7 @@
 
                 <!-- Sample posts -->
                 <!-- Sample posts -->
-                <article class="post-card" onclick="openPostDetail(1)">
+                <article class="post-card" onclick="showPost(1)">
                     <div class="post-image">🎨</div>
                     <div class="post-content">
                         <div class="post-meta">
@@ -553,11 +606,11 @@
                         </div>
                         <h2 class="post-title">Rediscovering Watercolors</h2>
                         <p class="post-excerpt">After years away from the brush, I'm exploring the fluidity and unpredictability of watercolors. There's something meditative about letting the pigments blend and flow...</p>
-                        <a href="#" class="read-more" onclick="event.stopPropagation()">View Gallery →</a>
+                        <a href="#" class="read-more" onclick="event.stopPropagation(); showPost(1)">View Gallery →</a>
                     </div>
                 </article>
 
-                <article class="post-card" onclick="openPostDetail(2)">
+                <article class="post-card" onclick="showPost(2)">
                     <div class="post-image">🏠</div>
                     <div class="post-content">
                         <div class="post-meta">
@@ -570,7 +623,7 @@
                     </div>
                 </article>
 
-                <article class="post-card" onclick="openPostDetail(3)">
+                <article class="post-card" onclick="showPost(3)">
                     <div class="post-image">✨</div>
                     <div class="post-content">
                         <div class="post-meta">
@@ -579,9 +632,40 @@
                         </div>
                         <h2 class="post-title">On Beginning Again</h2>
                         <p class="post-excerpt">Starting this creative archive feels like opening a door I'd closed long ago. There's nervousness, but also excitement about what lies ahead...</p>
-                        <a href="#" class="read-more" onclick="event.stopPropagation()">Read More →</a>
+                        <a href="#" class="read-more" onclick="event.stopPropagation(); showPost(3)">Read More →</a>
                     </div>
                 </article>
+            </div>
+        </div>
+
+        <!-- Individual Post Pages -->
+        <div class="page-content" id="post-0">
+            <div class="post-page">
+                <a href="#" onclick="showPage('home')" class="back-button">Back to All Posts</a>
+                <h2>Entry 01: The First Mark</h2>
+                <div class="post-meta">
+                    <span class="post-category">Reflections</span>
+                    <span class="post-date">January 25, 2026</span>
+                </div>
+                <div class="post-body">
+                    <p>I've been standing on the edge of the page for years, afraid to step back in.</p>
+                    <p>There is a specific kind of grief in losing touch with your own creativity—a quiet, dull ache that follows you around. I missed the ink on my skin and the way a sketch can capture the soul of a room better than any camera ever could. I was afraid that if I started again, I wouldn't recognize my own hand, or worse, that the joy wouldn't be there waiting for me.</p>
+                    <p>But as I've spent these months finishing projects around my home, I've realized that my house and my sketchbook are breathing the same air.</p>
+                    <p>Curating this space—the vintage brass, the way the light hits the corner I finally finished, the textures I've foraged—is just another way of drawing. Every piece of furniture I place is a line I'm committing to. Every room I finish is a sketch I'm finally filling in.</p>
+                    <p>So, I'm putting the pen back to paper. No more waiting until I'm "ready" or until the fear goes away. I'm just going to document the home I'm building and the person I'm becoming inside it.</p>
+                    <p>It's messy. It's long overdue. It's home.</p>
+                </div>
+                <div class="image-gallery">
+                    <div class="gallery-item" onclick="openLightbox('largeswan.jpeg')">
+                        <img src="largeswan.jpeg" alt="Large Swan Sketch">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('smallswan.jpeg')">
+                        <img src="smallswan.jpeg" alt="Small Swan Sketch">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('desk.jpeg')">
+                        <img src="desk.jpeg" alt="Desk">
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -707,19 +791,6 @@
         </div>
     </div>
 
-    <!-- Post Detail Modal -->
-    <div class="modal" id="postDetailModal">
-        <div class="modal-content">
-            <h2 id="detailTitle"></h2>
-            <div id="detailMeta" style="margin-bottom: 1.5rem;"></div>
-            <div id="detailContent"></div>
-            <div id="detailGallery" class="image-gallery"></div>
-            <div class="button-group">
-                <button type="button" class="btn-secondary" onclick="closePostDetail()">Close</button>
-            </div>
-        </div>
-    </div>
-
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
         <button class="lightbox-close">&times;</button>
@@ -757,7 +828,7 @@
         function showPage(page, filter = null) {
             document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
             document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-            event.target.classList.add('active');
+            if (event && event.target) event.target.classList.add('active');
             
             if (page === 'home') {
                 document.getElementById('homePage').classList.add('active');
@@ -772,6 +843,15 @@
                 document.getElementById('archivePage').classList.add('active');
             } else if (page === 'contact') {
                 document.getElementById('contactPage').classList.add('active');
+            }
+        }
+
+        function showPost(postId) {
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+            const postPage = document.getElementById('post-' + postId);
+            if (postPage) {
+                postPage.classList.add('active');
+                window.scrollTo(0, 0);
             }
         }
 
@@ -845,7 +925,7 @@
             const article = document.createElement('article');
             article.className = 'post-card';
             article.style.animation = 'fadeIn 0.5s ease';
-            article.onclick = function() { openPostDetail(post.id); };
+            article.onclick = function() { showPost(post.id); };
             
             const imageHTML = post.images.length > 0 
                 ? `<img src="${post.images[0]}" alt="${post.title}">`
@@ -860,7 +940,7 @@
                     </div>
                     <h2 class="post-title">${post.title}</h2>
                     <p class="post-excerpt">${post.excerpt}</p>
-                    <a href="#" class="read-more" onclick="event.stopPropagation()">View ${post.images.length > 0 ? 'Gallery' : 'More'} →</a>
+                    <a href="#" class="read-more" onclick="event.stopPropagation(); showPost(${post.id})">View ${post.images.length > 0 ? 'Gallery' : 'More'} →</a>
                 </div>
             `;
             
@@ -868,34 +948,11 @@
         }
 
         function openPostDetail(postId) {
-            const post = posts.find(p => p.id === postId);
-            if (!post) return;
-
-            document.getElementById('detailTitle').textContent = post.title;
-            document.getElementById('detailMeta').innerHTML = `
-                <span class="post-category">${post.category}</span>
-                <span class="post-date" style="margin-left: 1rem;">${post.date}</span>
-            `;
-            document.getElementById('detailContent').innerHTML = post.content || `<p>${post.excerpt}</p>`;
-            
-            const gallery = document.getElementById('detailGallery');
-            gallery.innerHTML = '';
-            
-            if (post.images && post.images.length > 0) {
-                post.images.forEach(img => {
-                    const item = document.createElement('div');
-                    item.className = 'gallery-item';
-                    item.innerHTML = `<img src="${img}" alt="${post.title}">`;
-                    item.onclick = function() { openLightbox(img); };
-                    gallery.appendChild(item);
-                });
-            }
-
-            document.getElementById('postDetailModal').classList.add('active');
+            showPost(postId);
         }
 
         function closePostDetail() {
-            document.getElementById('postDetailModal').classList.remove('active');
+            showPage('home');
         }
 
         function openLightbox(imageSrc) {
@@ -920,10 +977,6 @@
 
         document.getElementById('postModal').addEventListener('click', function(e) {
             if (e.target === this) closeModal();
-        });
-
-        document.getElementById('postDetailModal').addEventListener('click', function(e) {
-            if (e.target === this) closePostDetail();
         });
 
         // Archive image upload
