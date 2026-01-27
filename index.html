@@ -184,7 +184,7 @@
         }
 
         .post-page {
-            max-width: 750px;
+            max-width: 950px;
             margin: 0 auto;
             padding: 3rem 2rem;
         }
@@ -276,6 +276,35 @@
             line-height: 2;
             color: #555;
             font-size: 1.15rem;
+        }
+
+        .about-section ul {
+            list-style: none;
+            margin: 2rem 0 2.5rem 0;
+            padding: 0;
+        }
+
+        .about-section ul li {
+            margin-bottom: 1.5rem;
+            line-height: 2;
+            color: #555;
+            font-size: 1.15rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .about-section ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8b4f56;
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .about-section ul li strong {
+            color: #2a2a2a;
+            font-weight: 600;
         }
 
         .about-image-placeholder {
@@ -483,9 +512,9 @@
     <nav>
         <ul>
             <li><a href="#" onclick="showPage('home')" class="active">All</a></li>
-            <li><a href="#" onclick="showPage('home', 'art')">Art</a></li>
-            <li><a href="#" onclick="showPage('home', 'design')">Interior Design</a></li>
-            <li><a href="#" onclick="showPage('home', 'reflections')">Reflections</a></li>
+            <li><a href="#" onclick="showPage('home', 'sketchbook')">The Sketchbook</a></li>
+            <li><a href="#" onclick="showPage('home', 'room')">The Room</a></li>
+            <li><a href="#" onclick="showPage('home', 'archive')">The Archive</a></li>
             <li><a href="#" onclick="showPage('about')">About</a></li>
             <li><a href="#" onclick="showPage('contact')">Contact</a></li>
         </ul>
@@ -501,7 +530,7 @@
                     </div>
                     <div class="post-content">
                         <div class="post-meta">
-                            <span class="post-category">Reflections</span>
+                            <span class="post-category">The Sketchbook</span>
                             <span class="post-date">January 25, 2026</span>
                         </div>
                         <h2 class="post-title">Entry 01: The First Mark</h2>
@@ -517,7 +546,7 @@
                     </div>
                     <div class="post-content">
                         <div class="post-meta">
-                            <span class="post-category">Interior Design</span>
+                            <span class="post-category">The Archive</span>
                             <span class="post-date">January 26, 2026</span>
                         </div>
                         <h2 class="post-title">Archive: Building Our Georgian Colonial, 2013</h2>
@@ -534,7 +563,7 @@
                 <a href="#" onclick="showPage('home')" class="back-button">Back to All Posts</a>
                 <h2>Entry 01: The First Mark</h2>
                 <div class="post-meta">
-                    <span class="post-category">Reflections</span>
+                    <span class="post-category">The Sketchbook</span>
                     <span class="post-date">January 25, 2026</span>
                 </div>
                 <div class="post-body">
@@ -557,7 +586,7 @@
                 <a href="#" onclick="showPage('home')" class="back-button">Back to All Posts</a>
                 <h2>Archive: Building Our Georgian Colonial, 2013</h2>
                 <div class="post-meta">
-                    <span class="post-category">Interior Design</span>
+                    <span class="post-category">The Archive</span>
                     <span class="post-date">January 26, 2026</span>
                 </div>
                 <div class="post-body">
@@ -606,10 +635,15 @@
                 <div class="about-image-placeholder">
                     <img src="me.png" alt="Ange">
                 </div>
-                <h2>About Me</h2>
-                <p>Hi, I'm Ange... Welcome to my work-in-progress.</p>
-                <p>This is an archive of things made and things found. I lost touch with my creative joy for a while... this is the story of finding it again in the grit of a pencil sketch and the story of a vintage find. Between the walls of my home and the pages of my sketchbook, I'm learning to trade perfection for presence again.</p>
-                <p>I'm using this site to find my way back to what I actually love—starting with my own house. It's not a perfect portfolio; it's a public diary to keep me honest while I pick up the pencil again.</p>
+                <h2>Welcome to the mess and the magic.</h2>
+                <p>For a long time, I think I forgot how to just make things. This space is my way of finding the path back to that feeling. It's a living document of the two things currently consuming my days: my art practice and the slow, intentional evolution of our home.</p>
+                <p>I'm not interested in "perfect reveals" or "final versions." Instead, you'll find:</p>
+                <ul>
+                    <li><strong>The Sketchbook:</strong> Raw sketches, color experiments, and the quiet moments in the studio.</li>
+                    <li><strong>The Room:</strong> How I'm shaping our space, one corner (and one thrifted find) at a time.</li>
+                    <li><strong>The Archive:</strong> A collection of the projects, spaces, and experiments that got us to where we are now.</li>
+                </ul>
+                <p>It's about the process, the "ugly stages," and the joy of finally expressing myself again. Thanks for being here while I figure it out.</p>
             </div>
         </div>
 
