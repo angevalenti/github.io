@@ -82,58 +82,6 @@
             display: block;
         }
 
-        .post-page {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-        }
-
-        .post-page h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #2c2c2c;
-            font-weight: 300;
-            line-height: 1.3;
-        }
-
-        .post-page .post-meta {
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .post-page .post-body {
-            font-size: 1.1rem;
-            line-height: 1.9;
-            color: #444;
-            margin-bottom: 2rem;
-        }
-
-        .post-page .post-body p {
-            margin-bottom: 1.5rem;
-        }
-
-        .back-button {
-            display: inline-block;
-            color: #a8967a;
-            text-decoration: none;
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-            margin-bottom: 2rem;
-            transition: color 0.3s ease;
-        }
-
-        .back-button:hover {
-            color: #8b7a65;
-        }
-
-        .back-button::before {
-            content: "← ";
-        }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -178,6 +126,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            opacity: 1;
         }
 
         .post-content {
@@ -233,7 +182,58 @@
             color: #8b7a65;
         }
 
-        /* About Page */
+        .post-page {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .post-page h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+            font-weight: 300;
+            line-height: 1.3;
+        }
+
+        .post-page .post-meta {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .post-page .post-body {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #444;
+            margin-bottom: 2rem;
+        }
+
+        .post-page .post-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            color: #a8967a;
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: #8b7a65;
+        }
+
+        .back-button::before {
+            content: "← ";
+        }
+
         .about-section {
             max-width: 800px;
             margin: 0 auto;
@@ -273,7 +273,6 @@
             opacity: 1;
         }
 
-        /* Contact Page */
         .contact-section {
             max-width: 700px;
             margin: 0 auto;
@@ -296,7 +295,6 @@
             line-height: 1.8;
         }
 
-        /* Image Gallery */
         .image-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -324,38 +322,6 @@
             object-fit: cover;
         }
 
-        .gallery-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: #fff;
-            opacity: 0.6;
-        }
-
-        .add-image-btn {
-            width: 100%;
-            height: 100%;
-            background: #f5f5f5;
-            border: 2px dashed #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: #ccc;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .add-image-btn:hover {
-            background: #ececec;
-            border-color: #a8967a;
-            color: #a8967a;
-        }
-
-        /* Lightbox */
         .lightbox {
             display: none;
             position: fixed;
@@ -390,148 +356,15 @@
             border: none;
         }
 
-        /* Buttons */
-        .add-post-btn {
-            position: fixed;
-            bottom: 3rem;
-            right: 3rem;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #a8967a 0%, #8b7a65 100%);
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            font-size: 2rem;
-            cursor: pointer;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .add-post-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.6);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background: #fff;
-            padding: 2.5rem;
-            border-radius: 12px;
-            max-width: 600px;
-            width: 90%;
-            max-height: 90vh;
-            overflow-y: auto;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-        }
-
-        .modal h2 {
-            margin-bottom: 1.5rem;
-            color: #4a4a4a;
-            font-weight: 400;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #4a4a4a;
-            font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-        }
-
-        input, textarea, select {
-            width: 100%;
-            padding: 0.8rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 6px;
-            font-family: 'Georgia', serif;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        input:focus, textarea:focus, select:focus {
-            outline: none;
-            border-color: #a8967a;
-        }
-
-        textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        input[type="file"] {
-            padding: 0.5rem;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 1rem;
-            justify-content: flex-end;
-            margin-top: 2rem;
-        }
-
-        button {
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            letter-spacing: 1px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #a8967a 0%, #8b7a65 100%);
-            color: #fff;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(168, 150, 122, 0.4);
-        }
-
-        .btn-secondary {
-            background: #e0e0e0;
-            color: #4a4a4a;
-        }
-
-        .btn-secondary:hover {
-            background: #d0d0d0;
-        }
-
-        .success-message {
-            display: none;
-            background: #d4edda;
-            color: #155724;
-            padding: 1rem;
-            border-radius: 6px;
-            margin-bottom: 1rem;
-            border: 1px solid #c3e6cb;
-        }
-
-        .success-message.active {
-            display: block;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @media (max-width: 768px) {
@@ -545,11 +378,6 @@
 
             nav ul {
                 gap: 1.5rem;
-            }
-
-            .add-post-btn {
-                bottom: 2rem;
-                right: 2rem;
             }
 
             .image-gallery {
@@ -570,7 +398,6 @@
             <li><a href="#" onclick="showPage('home', 'art')">Art</a></li>
             <li><a href="#" onclick="showPage('home', 'design')">Interior Design</a></li>
             <li><a href="#" onclick="showPage('home', 'reflections')">Reflections</a></li>
-            <li><a href="#" onclick="showPage('archive')">Archive</a></li>
             <li><a href="#" onclick="showPage('about')">About Me</a></li>
             <li><a href="#" onclick="showPage('contact')">Contact</a></li>
         </ul>
@@ -578,11 +405,11 @@
 
     <div class="container">
         <div class="page-content active" id="homePage">
-            <div class="post-grid" id="postGrid">
-                <!-- Your first blog post -->
-                <article class="post-card" onclick="openPostDetail(0)">
+            <div class="post-grid">
+                <!-- Post 1: Entry 01 -->
+                <article class="post-card" onclick="showPost(0)">
                     <div class="post-image">
-                        <img src="desk.jpeg" alt="Entry 01: The First Mark">
+                        <img src="handinsketch.jpeg" alt="Entry 01: The First Mark">
                     </div>
                     <div class="post-content">
                         <div class="post-meta">
@@ -590,55 +417,30 @@
                             <span class="post-date">January 25, 2026</span>
                         </div>
                         <h2 class="post-title">Entry 01: The First Mark</h2>
-                        <p class="post-excerpt">There is a specific kind of grief in losing touch with your own creativity, but I've realized that curating a space is just another way of drawing. I'm no longer waiting until I'm 'ready'—I'm just coming home to the page.</p>
-                        <a href="#" class="read-more" onclick="event.stopPropagation()">Read More →</a>
+                        <p class="post-excerpt">There is a special kind of grief in losing touch with your own creativity... a quiet, dull ache that's hard to ignore.</p>
+                        <a href="#" class="read-more" onclick="event.stopPropagation(); showPost(0)">Read More →</a>
                     </div>
                 </article>
 
-                <!-- Sample posts -->
-                <!-- Sample posts -->
+                <!-- Post 2: Archive -->
                 <article class="post-card" onclick="showPost(1)">
-                    <div class="post-image">🎨</div>
-                    <div class="post-content">
-                        <div class="post-meta">
-                            <span class="post-category">Art</span>
-                            <span class="post-date">January 20, 2026</span>
-                        </div>
-                        <h2 class="post-title">Rediscovering Watercolors</h2>
-                        <p class="post-excerpt">After years away from the brush, I'm exploring the fluidity and unpredictability of watercolors. There's something meditative about letting the pigments blend and flow...</p>
-                        <a href="#" class="read-more" onclick="event.stopPropagation(); showPost(1)">View Gallery →</a>
+                    <div class="post-image">
+                        <img src="foundation_framedback.jpeg" alt="Archive: Building Our Georgian Colonial, 2013">
                     </div>
-                </article>
-
-                <article class="post-card" onclick="showPost(2)">
-                    <div class="post-image">🏠</div>
                     <div class="post-content">
                         <div class="post-meta">
                             <span class="post-category">Interior Design</span>
-                            <span class="post-date">January 18, 2026</span>
+                            <span class="post-date">January 26, 2026</span>
                         </div>
-                        <h2 class="post-title">Living Room Refresh</h2>
-                        <p class="post-excerpt">Transforming my living space with warm earth tones and natural textures. The connection between this palette and my recent paintings is becoming clear...</p>
-                        <a href="#" class="read-more" onclick="event.stopPropagation()">View Gallery →</a>
-                    </div>
-                </article>
-
-                <article class="post-card" onclick="showPost(3)">
-                    <div class="post-image">✨</div>
-                    <div class="post-content">
-                        <div class="post-meta">
-                            <span class="post-category">Reflections</span>
-                            <span class="post-date">January 15, 2026</span>
-                        </div>
-                        <h2 class="post-title">On Beginning Again</h2>
-                        <p class="post-excerpt">Starting this creative archive feels like opening a door I'd closed long ago. There's nervousness, but also excitement about what lies ahead...</p>
-                        <a href="#" class="read-more" onclick="event.stopPropagation(); showPost(3)">Read More →</a>
+                        <h2 class="post-title">Archive: Building Our Georgian Colonial, 2013</h2>
+                        <p class="post-excerpt">In 2013, we built a Georgian Colonial from the ground up. I documented every step: the gravel delivery, the masons at work, and the quiet skeleton of a house waiting to become a home.</p>
+                        <a href="#" class="read-more" onclick="event.stopPropagation(); showPost(1)">View Gallery →</a>
                     </div>
                 </article>
             </div>
         </div>
 
-        <!-- Individual Post Pages -->
+        <!-- Post 0 Page -->
         <div class="page-content" id="post-0">
             <div class="post-page">
                 <a href="#" onclick="showPage('home')" class="back-button">Back to All Posts</a>
@@ -661,6 +463,7 @@
             </div>
         </div>
 
+        <!-- Post 1 Page -->
         <div class="page-content" id="post-1">
             <div class="post-page">
                 <a href="#" onclick="showPage('home')" class="back-button">Back to All Posts</a>
@@ -740,6 +543,7 @@
             </div>
         </div>
 
+        <!-- About Page -->
         <div class="page-content" id="aboutPage">
             <div class="about-section">
                 <div class="about-image-placeholder">
@@ -752,113 +556,38 @@
             </div>
         </div>
 
-        <div class="page-content" id="archivePage">
-            <div class="about-section">
-                <h2>Archive: House Projects</h2>
-                <p>A collection of past interior design projects and home transformations. These spaces represent earlier chapters of my creative journey—experiments with color, texture, and the way we shape the places we live.</p>
-                
-                <div class="image-gallery" style="margin-top: 2rem;">
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder">🏠</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder">🪴</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder">🛋️</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder">🎨</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder">💡</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="add-image-btn" onclick="document.getElementById('archiveUpload').click()">+</div>
-                    </div>
-                </div>
-                <input type="file" id="archiveUpload" accept="image/*" multiple style="display: none;">
-                <p style="margin-top: 2rem; font-size: 0.9rem; color: #888; font-style: italic;">Click the + to add photos from your past projects</p>
-            </div>
-        </div>
-
+        <!-- Contact Page -->
         <div class="page-content" id="contactPage">
             <div class="contact-section">
                 <h2>Get in Touch</h2>
                 <p>I'd love to hear from you. Whether you have questions about my work, want to collaborate, or just want to say hello, feel free to reach out.</p>
                 
-                <div class="success-message" id="successMessage">
-                    Thank you for your message! I'll get back to you soon.
-                </div>
-
                 <form id="contactForm">
-                    <div class="form-group">
-                        <label for="contactName">Your Name</label>
-                        <input type="text" id="contactName" required>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: #4a4a4a; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px;">Your Name</label>
+                        <input type="text" required style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 6px; font-family: 'Georgia', serif; font-size: 1rem;">
                     </div>
                     
-                    <div class="form-group">
-                        <label for="contactEmail">Email Address</label>
-                        <input type="email" id="contactEmail" required>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: #4a4a4a; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px;">Email Address</label>
+                        <input type="email" required style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 6px; font-family: 'Georgia', serif; font-size: 1rem;">
                     </div>
                     
-                    <div class="form-group">
-                        <label for="contactSubject">Subject</label>
-                        <input type="text" id="contactSubject" required>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: #4a4a4a; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px;">Subject</label>
+                        <input type="text" required style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 6px; font-family: 'Georgia', serif; font-size: 1rem;">
                     </div>
 
-                    <div class="form-group">
-                        <label for="contactMessage">Message</label>
-                        <textarea id="contactMessage" required></textarea>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: #4a4a4a; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px;">Message</label>
+                        <textarea required style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 6px; font-family: 'Georgia', serif; font-size: 1rem; min-height: 150px; resize: vertical;"></textarea>
                     </div>
 
-                    <div class="button-group">
-                        <button type="submit" class="btn-primary">Send Message</button>
+                    <div style="display: flex; gap: 1rem; justify-content: flex-end; margin-top: 2rem;">
+                        <button type="submit" style="padding: 0.8rem 2rem; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem; letter-spacing: 1px; background: linear-gradient(135deg, #a8967a 0%, #8b7a65 100%); color: #fff;">Send Message</button>
                     </div>
                 </form>
             </div>
-        </div>
-    </div>
-
-    <button class="add-post-btn" onclick="openModal()">+</button>
-
-    <!-- New Post Modal -->
-    <div class="modal" id="postModal">
-        <div class="modal-content">
-            <h2>New Entry</h2>
-            <form id="postForm">
-                <div class="form-group">
-                    <label for="postTitle">Title</label>
-                    <input type="text" id="postTitle" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="postCategory">Category</label>
-                    <select id="postCategory" required>
-                        <option value="">Select a category</option>
-                        <option value="Art">Art</option>
-                        <option value="Interior Design">Interior Design</option>
-                        <option value="Reflections">Reflections</option>
-                        <option value="Process">Process</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="postExcerpt">Excerpt</label>
-                    <textarea id="postExcerpt" placeholder="A brief preview of your entry..." required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="postImages">Add Images (optional)</label>
-                    <input type="file" id="postImages" accept="image/*" multiple>
-                    <small style="color: #888; font-size: 0.85rem;">You can select multiple images</small>
-                </div>
-
-                <div class="button-group">
-                    <button type="button" class="btn-secondary" onclick="closeModal()">Cancel</button>
-                    <button type="submit" class="btn-primary">Publish Entry</button>
-                </div>
-            </form>
         </div>
     </div>
 
@@ -869,45 +598,6 @@
     </div>
 
     <script>
-        const posts = [
-            { 
-                id: 0, 
-                title: 'Entry 01: The First Mark', 
-                category: 'Reflections', 
-                date: 'January 25, 2026', 
-                excerpt: 'There is a specific kind of grief in losing touch with your own creativity, but I\'ve realized that curating a space is just another way of drawing. I\'m no longer waiting until I\'m \'ready\'—I\'m just coming home to the page.', 
-                content: `<p>I've been standing on the edge of the page for years, afraid to step back in.</p>
-                <p>There is a specific kind of grief in losing touch with your own creativity—a quiet, dull ache that follows you around. I missed the ink on my skin and the way a sketch can capture the soul of a room better than any camera ever could. I was afraid that if I started again, I wouldn't recognize my own hand, or worse, that the joy wouldn't be there waiting for me.</p>
-                <p>But as I've spent these months finishing projects around my home, I've realized that my house and my sketchbook are breathing the same air.</p>
-                <p>Curating this space—the vintage brass, the way the light hits the corner I finally finished, the textures I've foraged—is just another way of drawing. Every piece of furniture I place is a line I'm committing to. Every room I finish is a sketch I'm finally filling in.</p>
-                <p>So, I'm putting the pen back to paper. No more waiting until I'm "ready" or until the fear goes away. I'm just going to document the home I'm building and the person I'm becoming inside it.</p>
-                <p>It's messy. It's long overdue. It's home.</p>`,
-                images: ['handinsketch.jpeg'] 
-            },
-            { 
-                id: 1, 
-                title: 'Archive: Building Our Georgian Colonial, 2013', 
-                category: 'Interior Design', 
-                date: 'January 26, 2026', 
-                excerpt: 'Looking back at the foundation of the house we built over a decade ago—when dreams were big and plans were certain. Everything evolved differently than I imagined, and that\'s exactly as it should be.', 
-                content: `<p>In 2013, we built a Georgian Colonial from the ground up. I documented every step—the gravel delivery, the masons working ahead of schedule, the day we pressed our handprints into the wet basement concrete. I had such specific dreams for what this house would become.</p>
-                <p>Looking back now, I realize I had big dreams, all of which have evolved over time into a life and home beautiful and so full of love and heart, but nothing like I had planned.</p>
-                <p>My style has changed and matured so much since then. What I thought I wanted in those cabinet showrooms isn't what makes me happy now. The kids who left tiny handprints in that concrete are teens. Life is much more settled and "grown in"—still chaotic at times, but the journey has fueled me to learn, practice what I've learned, and reflect.</p>
-                <p>This house taught me that foundations matter, but they're just the beginning. What you build on top of them changes as you do. It's always a work in progress—I'm still learning about myself, and that shows up in the way I curate my home and art.</p>`,
-                images: ['foundation_framedback.jpeg'] 
-            },
-            { id: 2, title: 'Rediscovering Watercolors', category: 'Art', date: 'January 20, 2026', excerpt: 'After years away from the brush...', images: [] },
-            { id: 3, title: 'Living Room Refresh', category: 'Interior Design', date: 'January 18, 2026', excerpt: 'Transforming my living space...', images: [] },
-            { id: 4, title: 'On Beginning Again', category: 'Reflections', date: 'January 15, 2026', excerpt: 'Starting this creative archive...', images: [] }
-        ];
-
-        const icons = {
-            'Art': '🎨',
-            'Interior Design': '🏠',
-            'Reflections': '✨',
-            'Process': '📝'
-        };
-
         function showPage(page, filter = null) {
             document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
             document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
@@ -915,15 +605,8 @@
             
             if (page === 'home') {
                 document.getElementById('homePage').classList.add('active');
-                if (filter) {
-                    filterPosts(filter);
-                } else {
-                    filterPosts('all');
-                }
             } else if (page === 'about') {
                 document.getElementById('aboutPage').classList.add('active');
-            } else if (page === 'archive') {
-                document.getElementById('archivePage').classList.add('active');
             } else if (page === 'contact') {
                 document.getElementById('contactPage').classList.add('active');
             }
@@ -938,106 +621,6 @@
             }
         }
 
-        function filterPosts(category) {
-            const cards = document.querySelectorAll('.post-card');
-            cards.forEach(card => {
-                const cardCategory = card.querySelector('.post-category').textContent;
-                if (category === 'all' || cardCategory.toLowerCase().includes(category)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        function openModal() {
-            document.getElementById('postModal').classList.add('active');
-        }
-
-        function closeModal() {
-            document.getElementById('postModal').classList.remove('active');
-            document.getElementById('postForm').reset();
-        }
-
-        function formatDate() {
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            return new Date().toLocaleDateString('en-US', options);
-        }
-
-        document.getElementById('postForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const title = document.getElementById('postTitle').value;
-            const category = document.getElementById('postCategory').value;
-            const excerpt = document.getElementById('postExcerpt').value;
-            const imageFiles = document.getElementById('postImages').files;
-            
-            const images = [];
-            const fileReaders = [];
-
-            for (let i = 0; i < imageFiles.length; i++) {
-                const reader = new FileReader();
-                fileReaders.push(new Promise(resolve => {
-                    reader.onload = function(e) {
-                        images.push(e.target.result);
-                        resolve();
-                    };
-                    reader.readAsDataURL(imageFiles[i]);
-                }));
-            }
-
-            Promise.all(fileReaders).then(() => {
-                const post = {
-                    id: posts.length,
-                    title,
-                    category,
-                    excerpt,
-                    date: formatDate(),
-                    icon: icons[category] || '📄',
-                    images
-                };
-                
-                posts.unshift(post);
-                addPostToGrid(post);
-                closeModal();
-            });
-        });
-
-        function addPostToGrid(post) {
-            const postGrid = document.getElementById('postGrid');
-            const article = document.createElement('article');
-            article.className = 'post-card';
-            article.style.animation = 'fadeIn 0.5s ease';
-            article.onclick = function() { showPost(post.id); };
-            
-            const imageHTML = post.images.length > 0 
-                ? `<img src="${post.images[0]}" alt="${post.title}">`
-                : post.icon;
-            
-            article.innerHTML = `
-                <div class="post-image">${imageHTML}</div>
-                <div class="post-content">
-                    <div class="post-meta">
-                        <span class="post-category">${post.category}</span>
-                        <span class="post-date">${post.date}</span>
-                    </div>
-                    <h2 class="post-title">${post.title}</h2>
-                    <p class="post-excerpt">${post.excerpt}</p>
-                    <a href="#" class="read-more" onclick="event.stopPropagation(); showPost(${post.id})">View ${post.images.length > 0 ? 'Gallery' : 'More'} →</a>
-                </div>
-            `;
-            
-            postGrid.insertBefore(article, postGrid.firstChild);
-        }
-
-        function openPostDetail(postId) {
-            showPost(postId);
-        }
-
-        function closePostDetail() {
-            showPage('home');
-        }
-
         function openLightbox(imageSrc) {
             document.getElementById('lightboxImage').src = imageSrc;
             document.getElementById('lightbox').classList.add('active');
@@ -1049,52 +632,9 @@
 
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            document.getElementById('successMessage').classList.add('active');
+            alert('Thank you for your message! (Note: This is a demo form - messages are not actually sent)');
             this.reset();
-            
-            setTimeout(() => {
-                document.getElementById('successMessage').classList.remove('active');
-            }, 5000);
         });
-
-        document.getElementById('postModal').addEventListener('click', function(e) {
-            if (e.target === this) closeModal();
-        });
-
-        // Archive image upload
-        document.getElementById('archiveUpload').addEventListener('change', function(e) {
-            const files = e.target.files;
-            const gallery = document.querySelector('#archivePage .image-gallery');
-            const addBtn = gallery.querySelector('.add-image-btn').parentElement;
-            
-            for (let i = 0; i < files.length; i++) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                    const item = document.createElement('div');
-                    item.className = 'gallery-item';
-                    item.innerHTML = `<img src="${event.target.result}" alt="Archive photo">`;
-                    item.onclick = function() { openLightbox(event.target.result); };
-                    gallery.insertBefore(item, addBtn);
-                };
-                reader.readAsDataURL(files[i]);
-            }
-        });
-
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-        `;
-        document.head.appendChild(style);
     </script>
 </body>
 </html>
