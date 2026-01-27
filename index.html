@@ -214,6 +214,29 @@
             margin-bottom: 2rem;
         }
 
+        .post-page .post-body img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin: 3rem 0;
+            cursor: pointer;
+        }
+
+        .post-page .post-image-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .post-page .post-image-row img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin: 0;
+            cursor: pointer;
+        }
+
         .back-button {
             display: inline-block;
             color: #666;
@@ -538,71 +561,40 @@
                     <span class="post-date">January 26, 2026</span>
                 </div>
                 <div class="post-body">
+                    <img src="foundation_lot.JPG" alt="The empty lot" onclick="openLightbox('foundation_lot.JPG')">
+                    
                     <p>In 2013, we built a Georgian Colonial from the ground up. I documented every step: the gravel delivery, the masons at work, and the quiet skeleton of a house waiting to become a home. I had such specific dreams for what this space would be, but looking back, those early mood boards were just a starting point.</p>
+                    
+                    <div class="post-image-row">
+                        <img src="foundation_dig.jpeg" alt="Excavation" onclick="openLightbox('foundation_dig.jpeg')">
+                        <img src="foundation_hole.jpeg" alt="Foundation hole" onclick="openLightbox('foundation_hole.jpeg')">
+                    </div>
+                    
                     <p>My style has matured since then. I've realized that foundations matter, but they are only the beginning; what you build on top of them changes as you do. I'm still learning about myself, and that shows up in the way I curate my rooms and my art.</p>
+                    
+                    <img src="foundation-block.jpeg" alt="Block foundation" onclick="openLightbox('foundation-block.jpeg')">
+                    
                     <p>It's always a work in progress... and that's exactly how it's meant to be.</p>
-                    <p>Below are a few glimpses into the layers of this house. You'll see the raw edges of the build and the early light in empty rooms, the "before" sketches of the life we are still creating. I hope they remind you that a home doesn't have to be finished to be beautiful.</p>
-                </div>
-                <div class="image-gallery">
-                    <div class="gallery-item" onclick="openLightbox('foundation_lot.JPG')">
-                        <img src="foundation_lot.JPG" alt="The Lot">
+                    
+                    <div class="post-image-row">
+                        <img src="foundation_framedback.jpeg" alt="Framed house" onclick="openLightbox('foundation_framedback.jpeg')">
+                        <img src="foundation_2ndfloor.jpeg" alt="Second floor" onclick="openLightbox('foundation_2ndfloor.jpeg')">
                     </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_dig.jpeg')">
-                        <img src="foundation_dig.jpeg" alt="Excavation">
+                    
+                    <p>Below are a few more glimpses into the layers of this house. You'll see the raw edges of the build and the early light in empty rooms, the "before" sketches of the life we are still creating. I hope they remind you that a home doesn't have to be finished to be beautiful.</p>
+                    
+                    <img src="foundation_windows.jpeg" alt="Windows" onclick="openLightbox('foundation_windows.jpeg')">
+                    
+                    <div class="post-image-row">
+                        <img src="foundation_cabinets.jpeg" alt="Cabinet selection" onclick="openLightbox('foundation_cabinets.jpeg')">
+                        <img src="foundation_island.jpeg" alt="Kitchen island" onclick="openLightbox('foundation_island.jpeg')">
                     </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_digger.jpeg')">
-                        <img src="foundation_digger.jpeg" alt="Digger">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_hole.jpeg')">
-                        <img src="foundation_hole.jpeg" alt="Foundation Hole">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation-block.jpeg')">
-                        <img src="foundation-block.jpeg" alt="Block Foundation">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_grout.jpeg')">
-                        <img src="foundation_grout.jpeg" alt="Grout Work">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_basement.jpeg')">
-                        <img src="foundation_basement.jpeg" alt="Basement">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_framedback.jpeg')">
-                        <img src="foundation_framedback.jpeg" alt="Framed House">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_2ndfloor.jpeg')">
-                        <img src="foundation_2ndfloor.jpeg" alt="Second Floor Framing">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_floor joyce.jpeg')">
-                        <img src="foundation_floor joyce.jpeg" alt="Floor Joists">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_windows.jpeg')">
-                        <img src="foundation_windows.jpeg" alt="Windows">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_doors.jpeg')">
-                        <img src="foundation_doors.jpeg" alt="Doors">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_driveway.jpeg')">
-                        <img src="foundation_driveway.jpeg" alt="Driveway">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_porch.jpeg')">
-                        <img src="foundation_porch.jpeg" alt="Porch">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_cabinets.jpeg')">
-                        <img src="foundation_cabinets.jpeg" alt="Cabinet Selection">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_island.jpeg')">
-                        <img src="foundation_island.jpeg" alt="Kitchen Island">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_staircase.jpeg')">
-                        <img src="foundation_staircase.jpeg" alt="Staircase">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_hardwood floors.jpeg')">
-                        <img src="foundation_hardwood floors.jpeg" alt="Hardwood Floors">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_chandelier.jpeg')">
-                        <img src="foundation_chandelier.jpeg" alt="Chandelier">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('foundation_PRODUCT.jpeg')">
-                        <img src="foundation_PRODUCT.jpeg" alt="Product Selection">
+                    
+                    <img src="foundation_staircase.jpeg" alt="Staircase" onclick="openLightbox('foundation_staircase.jpeg')">
+                    
+                    <div class="post-image-row">
+                        <img src="foundation_hardwood floors.jpeg" alt="Hardwood floors" onclick="openLightbox('foundation_hardwood floors.jpeg')">
+                        <img src="foundation_chandelier.jpeg" alt="Chandelier" onclick="openLightbox('foundation_chandelier.jpeg')">
                     </div>
                 </div>
             </div>
