@@ -189,6 +189,15 @@
             padding: 3rem 2rem;
         }
 
+        .post-hero-image {
+            width: 100%;
+            max-width: 100%;
+            height: 500px;
+            object-fit: cover;
+            margin-bottom: 3rem;
+            cursor: pointer;
+        }
+
         .post-page h2 {
             font-size: 2.8rem;
             margin-bottom: 1.5rem;
@@ -212,6 +221,120 @@
 
         .post-page .post-body p {
             margin-bottom: 2rem;
+        }
+
+        .post-intro {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .section-divider {
+            border: none;
+            border-top: 1px solid #e8e8e8;
+            margin: 4rem 0;
+        }
+
+        .shop-the-look {
+            margin-top: 5rem;
+            padding-top: 4rem;
+            border-top: 1px solid #e8e8e8;
+        }
+
+        .shop-the-look h3 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            color: #2a2a2a;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .product-item {
+            text-align: center;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .product-item img:hover {
+            transform: scale(1.02);
+        }
+
+        .product-item a {
+            color: #2a2a2a;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom-color 0.3s ease;
+        }
+
+        .product-item a:hover {
+            border-bottom-color: #8b4f56;
+        }
+
+        .post-page .post-body h3 {
+            font-size: 1.6rem;
+            margin-top: 3rem;
+            margin-bottom: 1.2rem;
+            color: #2a2a2a;
+            font-weight: 600;
+        }
+
+        .post-page .post-body ul {
+            list-style: none;
+            margin: 2rem 0;
+            padding: 0;
+        }
+
+        .post-page .post-body ul li {
+            margin-bottom: 1.5rem;
+            line-height: 2;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .post-page .post-body ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8b4f56;
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .post-page .post-body ul li strong {
+            color: #2a2a2a;
+            font-weight: 600;
+        }
+
+        .post-page .post-body a {
+            color: #8b4f56;
+            text-decoration: none;
+            border-bottom: 1px solid #8b4f56;
+            transition: color 0.3s ease;
+        }
+
+        .post-page .post-body a:hover {
+            color: #7a9b76;
+            border-bottom-color: #7a9b76;
         }
 
         .post-page .post-body img {
@@ -554,6 +677,22 @@
                         <a href="#" class="read-more" onclick="event.stopPropagation(); showPost(1)">View Gallery</a>
                     </div>
                 </article>
+
+                <!-- Post 3: The Study -->
+                <article class="post-card" onclick="showPost(2)">
+                    <div class="post-image">
+                        <img src="study_placeholder.jpeg" alt="The Study: From Toys and TV to a Cozy Space of My Own">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-category">The Archive</span>
+                            <span class="post-date">January 27, 2026</span>
+                        </div>
+                        <h2 class="post-title">The Study: From Toys and TV to a Cozy Space of My Own</h2>
+                        <p class="post-excerpt">We used to call this the "Chaos Room." When the kids were little, it was a total playroom—think piles of LEGOs and toy cars everywhere. But as they've gotten older, we knew it was time for the room to grow up, too.</p>
+                        <a href="#" class="read-more" onclick="event.stopPropagation(); showPost(2)">Read More</a>
+                    </div>
+                </article>
             </div>
         </div>
 
@@ -561,21 +700,25 @@
         <div class="page-content" id="post-0">
             <div class="post-page">
                 <a href="#" onclick="showPage('home')" class="back-button">Back to All Posts</a>
+                
+                <img src="handinsketch.jpeg" alt="Entry 01: The First Mark" class="post-hero-image" onclick="openLightbox('handinsketch.jpeg')">
+                
                 <h2>Entry 01: The First Mark</h2>
                 <div class="post-meta">
                     <span class="post-category">The Sketchbook</span>
                     <span class="post-date">January 25, 2026</span>
                 </div>
+                
                 <div class="post-body">
-                    <p>There is a special kind of grief in losing touch with your own creativity... a quiet, dull ache that's hard to ignore. I've been an artist since childhood, but somewhere between art school and the beautiful chaos of motherhood, I lost my way to the page. Looking back, my life didn't follow the sketches I made in my twenties. The kids who left tiny handprints in the concrete are young teens now, and life is quieter. I've realized my house and my sketchbook breathe the same air.</p>
+                    <p class="post-intro">There is a special kind of grief in losing touch with your own creativity... a quiet, dull ache that's hard to ignore. I've been an artist since childhood, but somewhere between art school and the beautiful chaos of motherhood, I lost my way to the page.</p>
+                    
+                    <p>Looking back, my life didn't follow the sketches I made in my twenties. The kids who left tiny handprints in the concrete are young teens now, and life is quieter. I've realized my house and my sketchbook breathe the same air.</p>
+                    
                     <p>I'm still learning about myself, and that shows up in the way I curate my home and my art. The journey of this house has taught me that foundations matter, but they're just the beginning. What you build on top of them changes as you do.</p>
+                    
                     <p>So, I'm finally putting pencil to paper again to document the home I'm building and the person I'm becoming inside it. It's a work in progress.</p>
+                    
                     <p>It's messy. It's long overdue. It's home.</p>
-                </div>
-                <div class="image-gallery">
-                    <div class="gallery-item" onclick="openLightbox('handinsketch.jpeg')">
-                        <img src="handinsketch.jpeg" alt="Hand in Sketch">
-                    </div>
                 </div>
             </div>
         </div>
@@ -584,15 +727,19 @@
         <div class="page-content" id="post-1">
             <div class="post-page">
                 <a href="#" onclick="showPage('home')" class="back-button">Back to All Posts</a>
+                
+                <img src="foundation_framedback.jpeg" alt="Archive: Building Our Georgian Colonial, 2013" class="post-hero-image" onclick="openLightbox('foundation_framedback.jpeg')">
+                
                 <h2>Archive: Building Our Georgian Colonial, 2013</h2>
                 <div class="post-meta">
                     <span class="post-category">The Archive</span>
                     <span class="post-date">January 26, 2026</span>
                 </div>
+                
                 <div class="post-body">
-                    <img src="foundation_lot.JPG" alt="The empty lot" onclick="openLightbox('foundation_lot.JPG')">
+                    <p class="post-intro">In 2013, we built a Georgian Colonial from the ground up. I documented every step: the gravel delivery, the masons at work, and the quiet skeleton of a house waiting to become a home. I had such specific dreams for what this space would be, but looking back, those early mood boards were just a starting point.</p>
                     
-                    <p>In 2013, we built a Georgian Colonial from the ground up. I documented every step: the gravel delivery, the masons at work, and the quiet skeleton of a house waiting to become a home. I had such specific dreams for what this space would be, but looking back, those early mood boards were just a starting point.</p>
+                    <img src="foundation_lot.JPG" alt="The empty lot" onclick="openLightbox('foundation_lot.JPG')">
                     
                     <div class="post-image-row">
                         <img src="foundation_dig.jpeg" alt="Excavation" onclick="openLightbox('foundation_dig.jpeg')">
@@ -600,6 +747,8 @@
                     </div>
                     
                     <p>My style has matured since then. I've realized that foundations matter, but they are only the beginning; what you build on top of them changes as you do. I'm still learning about myself, and that shows up in the way I curate my rooms and my art.</p>
+                    
+                    <hr class="section-divider">
                     
                     <img src="foundation-block.jpeg" alt="Block foundation" onclick="openLightbox('foundation-block.jpeg')">
                     
@@ -609,6 +758,8 @@
                         <img src="foundation_framedback.jpeg" alt="Framed house" onclick="openLightbox('foundation_framedback.jpeg')">
                         <img src="foundation_2ndfloor.jpeg" alt="Second floor" onclick="openLightbox('foundation_2ndfloor.jpeg')">
                     </div>
+                    
+                    <hr class="section-divider">
                     
                     <p>Below are a few more glimpses into the layers of this house. You'll see the raw edges of the build and the early light in empty rooms, the "before" sketches of the life we are still creating. I hope they remind you that a home doesn't have to be finished to be beautiful.</p>
                     
@@ -624,6 +775,56 @@
                     <div class="post-image-row">
                         <img src="foundation_hardwood floors.jpeg" alt="Hardwood floors" onclick="openLightbox('foundation_hardwood floors.jpeg')">
                         <img src="foundation_chandelier.jpeg" alt="Chandelier" onclick="openLightbox('foundation_chandelier.jpeg')">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post 2 Page: The Study -->
+        <div class="page-content" id="post-2">
+            <div class="post-page">
+                <a href="#" onclick="showPage('home')" class="back-button">Back to All Posts</a>
+                
+                <img src="study_hero.jpeg" alt="The Study: From Toys and TV to a Cozy Space of My Own" class="post-hero-image" onclick="openLightbox('study_hero.jpeg')">
+                
+                <h2>The Study: From Toys and TV to a Cozy Space of My Own</h2>
+                <div class="post-meta">
+                    <span class="post-category">The Archive</span>
+                    <span class="post-date">January 27, 2026</span>
+                </div>
+                
+                <div class="post-body">
+                    <p class="post-intro">We used to call this the "Chaos Room." When the kids were little, it was a total playroom—think piles of LEGOs and toy cars everywhere. But as they've gotten older, we knew it was time for the room to grow up, too. We wanted to turn it into a study that actually felt like a sanctuary, not just a place to stash books.</p>
+                    
+                    <h3>The Blueprint</h3>
+                    <p>Before we even bought a piece of wood, we were playing around in Miro. We basically used it as a digital scrapbook to "mock up" the built-ins and drag in pictures of lights and rugs to see if they'd actually look good together. We still use that Miro board for every project; it's basically our home's brain at this point.</p>
+                    
+                    <hr class="section-divider">
+                    
+                    <h3>The Hard Work</h3>
+                    <p>My husband is a woodworker, so he took on the massive job of building the bookcases. The trickiest part? We really wanted those built-in picture lights, which meant he had to deal with all the electrical wiring inside the shelves while he was building them. It definitely wasn't a quick fix, and there were moments of "why did we start this?"—but that's the reality of progress over perfection, right?</p>
+                    
+                    <hr class="section-divider">
+                    
+                    <h3>My Sketchbook Update</h3>
+                    <p>I've been bringing my sketchbook in here every day. Since I'm trying to get back into the habit of drawing, being in a room that feels "finished" but still has that handmade soul really helps. Lately, I've just been sketching the way the light hits the books. It's not perfect, but I'm finally enjoying the process again.</p>
+                    
+                    <div class="shop-the-look">
+                        <h3>Shop the Look</h3>
+                        <div class="product-grid">
+                            <div class="product-item">
+                                <img src="product_lights.jpeg" alt="Brass Picture Lights" onclick="openLightbox('product_lights.jpeg')">
+                                <a href="https://www.visualcomfort.com/18-cabinet-maker-s-picture-light-sl2705/" target="_blank">Brass Picture Lights</a>
+                            </div>
+                            <div class="product-item">
+                                <img src="product_chandelier.jpeg" alt="Chandelier" onclick="openLightbox('product_chandelier.jpeg')">
+                                <a href="https://www.lowes.com/pd/Signature-Hardware-Alfaro-6-Light-Brushed-Gold-Mid-century-Chandelier/5014342959" target="_blank">Brushed Gold Chandelier</a>
+                            </div>
+                            <div class="product-item">
+                                <img src="product_paint.jpeg" alt="Annie Sloan Old White Paint" onclick="openLightbox('product_paint.jpeg')">
+                                <a href="https://www.anniesloan.com/us/product/wall-paint/white/old-white-wp/" target="_blank">Annie Sloan Old White</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
